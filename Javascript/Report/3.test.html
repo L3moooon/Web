@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //创建一个name变量
+        var name = "全局";
+
+        //创建一个fun函数
+        function fun(){
+            console.log(this.name);
+        }
+
+        //创建两个对象
+        var obj1 = {
+            name:"孙悟空",
+            sayName:fun
+        };
+
+        var obj2 = {
+            name:"猪八戒",
+            sayName:fun
+        };
+        fun();
+        //"全局"
+
+        //期望输出孙悟空
+        obj1.sayName();
+        //"全局"
+
+        //期望输出猪八戒
+        obj2.sayName();
+        //"全局"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

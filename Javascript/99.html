@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+    <link rel="stylesheet" href="../html&css/exercise/css/reset.css">
+    <script>
+        window.onload=function(){
+            var sport=document.getElementsByName("sport");
+            
+            //勾选全选和全不选
+            var select = document.getElementById("all");
+            select.onclick=function(){
+                if(all.checked==true){
+                    for(var i=0;i<sport.length;++i){
+                        sport[i].checked=true;
+                    }
+                }
+                else{
+                    for(var i=0;i<sport.length;++i){
+                        sport[i].checked=false;
+                    }
+                }
+            }
+
+            //检查勾选sport
+            var flag=true;
+            for(var i=0;i<sport.length;++i){
+                sport[i].onclick = function(){
+                    // if(sport[i].checked==false){
+                    //     all.checked=false;
+                    //     flag=false;
+                    // }
+                    alert(sport[i].value);
+                }         
+            }
+            if(flag){
+                    all.checked=true;
+            }
+
+
+            // 选择全选按钮
+            var sa = document.getElementById("select_all");
+            sa.onclick=function(){
+                for(var i=0;i<sport.length;++i){
+                    sport[i].checked=true;
+                }
+            }
+
+            //选择全不选按钮
+            var sn = document.getElementById("select_none");
+            sn.onclick=function(){
+                for(var i=0;i<sport.length;++i){
+                    sport[i].checked=false;
+                }
+            }
+
+            //选择反选按钮
+            var sr = document.getElementById("select_reverse");
+            sr.onclick=function(){
+                for(var i=0;i<sport.length;++i){
+                    if(sport[i].checked==false){
+                        sport[i].checked=true;
+                    }
+                    else{
+                        sport[i].checked=false;
+                    }
+                }
+            }
+
+            //选择提交按钮
+            var sub = document.getElementById("submit");
+            sub.onclick=function(){
+                for(var i=0;i<sport.length;++i){
+                    if(sport[i].checked==true){
+                        alert(sport[i].value);
+                    }
+                }
+            }
+   
+        }
+    </script>
+</head>
+<body>
+    <form action="#">
+        你爱好的运动是？<input type="checkbox" id="all">全选/全不选
+        <br>
+        <input type="checkbox" name="sport" id="" value="足球">足球
+        <input type="checkbox" name="sport" id="" value="篮球">篮球
+        <input type="checkbox" name="sport" id="" value="羽毛球">羽毛球
+        <input type="checkbox" name="sport" id="" value="乒乓球">乒乓球
+        <br>
+        <input type="button" id="select_all" value="全选">
+        <input type="button" id="select_none" value="全不选">
+        <input type="button" id="select_reverse" value="反选">
+        <input type="button" id="submit" value="提交">
+    </form>
+</body>
+</html>

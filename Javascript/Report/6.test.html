@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function fun (a,b){
+            console.log("a="+a);
+            console.log("b="+b);
+            console.log(this.name);
+        }
+        var obj = {
+            name:"obj",
+            sayName:fun
+        }
+        fun.call(obj);
+        //a=undefined,b=undefined,obj
+        fun.call(obj,1,2);
+        //a=1,b=2,obj
+
+        fun.apply(obj,1,2);
+        //报错
+        fun.apply(obj,[1,2]);
+        //a=1,b=2,obj
+    </script>
+</head>
+<body>
+
+</body>
+</html>

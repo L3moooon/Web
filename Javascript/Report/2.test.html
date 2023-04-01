@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //创建一个函数
+        function fun(a,b){
+            console.log(this.name);
+        }
+
+        //var name = "张聪"
+
+        //创建一个对象
+        var obj = {
+            name:"张勇",
+            //sayName属性设置为函数
+            sayName:fun
+        }
+
+        console.log(obj.sayName == fun);
+        //true
+        obj.sayName();
+        //"[object Object]"
+        fun();
+        //"[object Window]"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

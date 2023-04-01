@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background-color: #bfa;
+        }
+        div.news{
+            width: 300px;
+            /* height: 500px; */
+
+            background-color: white;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        div.news>div.title{
+            height: 42px;
+            /* border-style: solid;
+            border-color: gray;
+            border-width: 1px 0 0 0; */
+            border-top: solid gray 1px;
+        }
+        div.news>div.title>div.bar{
+            height: 42px;
+            width: 25%;
+            border-top: solid red 1px;
+            margin-top: -1px;
+        }
+
+        div.news>div.title a{
+            width: 32px;
+            height: 24px;
+            line-height: 42px;
+            font-size: 16px;
+            color: black;
+        }
+
+        div.news>div.title>span{
+            color: gray;
+        }
+        div.news>div.img>a>img{
+            width: 300px;
+            height: 150px;
+            margin-bottom: -40px;
+        }
+        div.news>div.img>a>div.subtitle{
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+
+        }
+
+        .detail>li{
+            height: 30px;
+            line-height: 30px;
+            list-style: circle;
+            padding-left: 15px;
+        }
+        .detail>li a{
+            font-size: 14px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="news">
+        <div class="title">
+            <div class="bar">
+                <a href="javascript:;">军事</a><span>*</span><a href="javascript:;">航空</a>
+            </div>
+        </div>
+
+        <div class="img">
+            <a href="javascript">
+                <img src="./picture/ffce68b5ad102f55.png.webp" alt="">
+                <div class="subtitle">巴拉巴拉巴拉</div>
+            </a>  
+        </div>
+
+        <ul class="detail">
+            <li>
+                <a href="javascript:;">巴拉巴拉巴放大文档发我拉</a>
+            </li>
+            <li>
+                <a href="javascript:;">巴拉巴拉巴拉</a>
+            </li>
+            <li>
+                <a href="javascript:;">巴拉巴达瓦发我个拉巴拉</a>
+            </li>
+            <li>
+                <a href="javascript:;">巴尬舞过去啊哇撒拉巴拉巴拉</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <style>
+        /* 设置顶栏大小 */
+        .top{
+            line-height: 40px;
+            background-color: #333333;
+        }
+        /* 设置顶栏内容大小 */
+        .top_content{
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .top_content::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 设置左侧浮动横向排列 */
+        .left>li{
+            float: left;
+        }
+        /* 设置右侧浮动横向排列 */
+        .right{
+            float: right;
+        }
+        .right>li{
+            float: left;
+        }
+        /* 设置字体 */
+        a{
+            line-height: 40px;
+            font: 12px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+            color: #b0b0b0;
+        }
+
+        /* 设置间隔符 */
+        li.line{
+            width: 1px;
+            height: 14px;
+            background-color: #424242;
+            margin: 13px 8px;
+        }
+
+        /* 设置li的hover效果 */
+        div.top li:hover a{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* 设置下载app的下拉栏 */
+        li.drop_arcode{
+            position: relative;
+        }
+        /* 设置下拉栏大小和位置 */
+        li.drop_arcode .drop_content{
+            width: 127px;
+            height: 150px;
+            display: none;
+            /* 设置下拉框位置 */
+            position: absolute;
+            left: -40px;
+        }
+        /* 设置图片大小 */
+        li.drop_arcode img{
+            width: 85px;
+            height: 85px;
+            /* 设置图片居中 */
+            display: block;
+            margin: 15px auto;
+        }
+        li.drop_arcode .drop_content{
+            font-size: 14px;
+            color: black;
+            text-align: center;
+        }
+        /* 设置下拉框hover显示效果 */
+        li.drop_arcode:hover .drop_content{
+            /* border: 1px black solid; */
+            box-shadow: 0 0 2px black;
+            display: block;
+            /* 提高层级 */
+            z-index: 999;
+        }
+
+        /* 单独设置购物车模块 */
+        ul.right>li:last-child{
+            /* 设置固定宽度 */
+            width: 120px;
+            margin-left: 30px;
+            background-color: #424242;
+            text-align: center;
+            position: relative;
+        }
+        /* 设置购物车下拉框内容 */
+        .drop_content_2{
+            display: none;
+            width: 316px;
+            line-height: 100px;
+            border-bottom: 1px white solid;
+            box-shadow: 0 0 2px black;
+            z-index: 999;
+
+            position: absolute;
+            /* top: 39px; */
+            left: -196px;
+        }
+        /* 设置hover背景颜色 */
+        ul.right>li:last-child:hover{
+            background-color: white  
+        }
+        /* 设置hover字体颜色 */
+        ul.right>li:last-child:hover a{
+            color: #ff6700;
+        }
+        /* 设置hover显示内容 */
+        ul.right>li:last-child:hover .drop_content_2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航条 -->
+    <header>
+        <!-- 顶栏部分 -->
+        <div class="top">
+            <!-- 顶栏内容 -->
+            <div class="top_content">
+
+                <!-- 顶栏左侧 -->
+                <ul class="left">
+                    <li>
+                        <a href="javascript:;">小米官网</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">小米商城</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">MIUI</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">loT</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">云服务</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">天星数科</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">有品</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">小爱开放平台</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">企业团购</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">资质证照</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">协议规则</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="drop_arcode">
+                        <a href="javascript:;">
+                            <span>下载app</span>
+                            <div class="drop_content">
+                                <img src="./picture/download.png" alt="">
+                                小米商城APP
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">Select Location</a>
+                    </li>
+                </ul>
+
+                <!-- 顶栏右侧 -->
+                <ul class="right">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="javascript:;">消息通知</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont icon-gouwuche"></i>
+                            购物车(0)
+                        </a>
+                        <div class="drop_content_2">
+                            购物车中还没有商品，赶紧选购吧！
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="navi">
+
+        </div>
+    </header>
+
+    <!-- 中段内容区 -->
+    <article></article>
+
+    <!-- 底部页面 -->
+    <footer>
+
+    </footer>
+</body>
+</html>

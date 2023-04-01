@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Person(name,age,gender) {
+            this.name = name;
+            alert(this.name);
+            this.age = age;
+            this.gender = gender;
+            this.sayName = function() {
+                alert(this.name+"是个大帅哥");
+            };
+        }
+        var per = new Person("肖鸿峰",22,"男");
+        console.log(per);
+        per.sayName();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

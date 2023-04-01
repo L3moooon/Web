@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //测试如下程序的性能
+        //程序执行前,开启计时器
+        //console.time("计时器的名字")可以用来开启一个计时器
+        //它需要一个字符串作为参数,这个字符串将会作为计时器的标识
+
+        console.time("test");
+
+        let num=prompt("请输入一个正整数");
+        if (num<1){
+            alert("请输入合法的值");
+        }
+        else if (num==2 || num==1){
+            alert(num+"不是质数");
+        }
+        else{
+            for (let i=2;i<num;++i){
+                if (num%i==0){
+                    alert(num+"不是质数");
+                    break;
+                }
+            }
+            alert(num+"是质数");
+        }
+
+        console.timeEnd("test");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

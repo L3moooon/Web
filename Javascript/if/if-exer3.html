@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        * prompt()的返回值是String类型的
+        * */
+        let num1 = +prompt("请输入变量1");
+        let num2 = +prompt("请输入变量2");
+        let num3 = +prompt("请输入变量3");
+
+        console.log(typeof num1);
+
+        let a=num1<num2?num1:num2;
+        let b=num2<num3?num2:num3;
+        let min=a<b?a:b;
+
+        let c=num1>num2?num1:num2;
+        let d=num2>num3?num2:num3;
+        let max=c>d?c:d;
+
+        let medium;
+        if(min < num1 && num1 < max){
+            medium =  num1;
+        }
+        else if(min < num2 && num2< max){
+            medium =  num2;
+        }
+        else{
+            medium =  num3;
+        }
+
+        console.log("min="+min,"medium="+medium,"max="+max);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

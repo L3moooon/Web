@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            text-align: center;
+            border: 1px black solid;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById("submit");
+            btn.onclick = function(){
+                alert("hello");
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var salary = document.getElementById("salary");
+                var table = document.querySelector("table");
+                
+                var tr = document.createElement("tr");
+                var td_name = document.createElement("td");
+                var td_email = document.createElement("td");
+                var td_salary = document.createElement("td");
+
+                td_name.innerHTML = name.value;
+                td_email.innerHTML = email.value;
+                td_salary.innerHTML = salary.value;
+
+                table.appendChild(tr);
+                tr.appendChild(td_name);
+                tr.appendChild(td_email);
+                tr.appendChild(td_salary);
+            };
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Salary</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>Tom@qq.com</td>
+            <td>5000</td>
+            <td>Delete</td>
+        </tr>
+    </table>
+
+    <div>
+        <div>添加新员工</div>
+        name:<input id="name" value="">
+        <br>
+        email:<input id="email" >
+        <br>
+        salary:<input id="salary">
+        <br>
+        <button id="submit">submit</button>
+    </div>
+</body>
+</html>

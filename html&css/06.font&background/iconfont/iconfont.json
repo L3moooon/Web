@@ -1,0 +1,93 @@
+{
+  "id": "3193504",
+  "name": "1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27578021",
+      "name": "跳转至前几秒",
+      "font_class": "tiaozhuanzhiqianjimiao",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "27578022",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "27578024",
+      "name": "设定",
+      "font_class": "sheding",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "27578025",
+      "name": "完成＋气泡",
+      "font_class": "a-wanchengqipao",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "27578026",
+      "name": "缩放 – 大",
+      "font_class": "a-suofangda",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "27578027",
+      "name": "向上",
+      "font_class": "xiangshang",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "27578028",
+      "name": "正确",
+      "font_class": "zhengque",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "27691135",
+      "name": "冰淇淋",
+      "font_class": "bingqilin",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
+      "icon_id": "27691136",
+      "name": "蛋糕",
+      "font_class": "dangao",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "27691137",
+      "name": "饭团",
+      "font_class": "fantuan",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "27691138",
+      "name": "火锅",
+      "font_class": "huoguo",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "27691139",
+      "name": "咖啡",
+      "font_class": "kafei",
+      "unicode": "e721",
+      "unicode_decimal": 59169
+    }
+  ]
+}

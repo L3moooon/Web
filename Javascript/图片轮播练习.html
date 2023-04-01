@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../html&css/exercise/css/reset.css">
+    <style>
+        .out_box{
+            width: 400px;
+            height: 270px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: grey;
+        }
+        img{
+            width: 90%;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        var index=0;
+        var imgArr = ["./img/389349.jpg","./img/41201.jpg","./img/414384.jpg","./img/414385.jpg","./img/779142.jpg"];
+        window.onload=function(){
+            var pre = document.getElementById("pre");
+            var next = document.getElementById("next");
+            var p = document.getElementsByTagName("p")[0];
+            pre.onclick = function(){
+                index--;
+                if(index<0){
+                    index=imgArr.length-1;
+                }
+                var image = document.getElementsByTagName("img")[0];
+                image.src = imgArr[index];
+                // var p = document.getElementsByTagName("p")[0];
+                p.innerHTML='总共'+imgArr.length+'张图片，'+'当前为第'+(index+1)+'张';
+            }
+            next.onclick = function(){
+                index++;
+                if(index==imgArr.length){
+                    index=0;
+                }
+                var image = document.getElementsByTagName("img")[0];
+                image.src = imgArr[index];
+                p.innerHTML='总共'+imgArr.length+'张图片，'+'当前为第'+(index+1)+'张';
+            }
+            
+
+            
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="out_box">
+        <p>总共5张图片，当前为第1张</p>
+        <img src="./img/389349.jpg" alt="">
+        <button id="pre">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+</body>
+</html>

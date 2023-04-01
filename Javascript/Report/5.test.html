@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var name = "全局";
+
+        //创建一个函数
+        function fun (){
+            console.log(this.name);
+        }
+
+        var obj1 = {
+            name:"陈罗林",
+            sayName:fun
+        };
+        var obj2 = {
+            name:"陈昊兵",
+            sayName:fun
+        };
+
+        fun();
+        //全局
+
+        fun.apply(obj1);
+        //陈罗林
+
+        obj1.sayName();
+        //陈罗林
+
+        obj1.sayName.apply(obj2);
+        //陈昊兵
+    </script>
+</head>
+<body>
+
+</body>
+</html>
